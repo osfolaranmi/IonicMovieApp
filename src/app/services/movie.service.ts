@@ -23,7 +23,7 @@ export class MovieService {
     return this.http.get(`${this.url}?s=${encodeURI(title)}&type=${type}&apikey=${this.apiKey}`)
     .pipe(
       map(results => {
-        console.log('RAW: ', results) ;
+        console.log('RAW:', results) ;
         return results['Search'];
       })
     );
